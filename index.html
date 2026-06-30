@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="hu" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#142a52" />
+<title>Pesti Közös Képviselet — Menedzsment, ami többet ad</title>
+<meta name="description" content="Komplex társasházkezelés Pest oldalán. Mérnöki, jogi és pénzügyi háttérrel. Átlátható elszámolás, pályázatfigyelés, gyors reagálás." />
+<meta property="og:title" content="Pesti Közös Képviselet" />
+<meta property="og:description" content="Komplex társasházkezelés Pest oldalán." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b76d9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolygon points='16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76'/%3E%3C/svg%3E" />
+<!-- Set .js immediately so no-JS users always see content (reveal elements stay visible) -->
+<script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --radius:0.5rem;
+  --background:oklch(1 0 0);
+  --foreground:oklch(0.18 0.04 250);
+  --card:oklch(1 0 0);
+  --card-foreground:oklch(0.18 0.04 250);
+  --primary:oklch(0.28 0.10 255);
+  --primary-foreground:oklch(0.99 0.005 250);
+  --primary-deep:oklch(0.20 0.08 258);
+  --primary-glow:oklch(0.55 0.16 245);
+  --secondary:oklch(0.96 0.012 250);
+  --secondary-foreground:oklch(0.22 0.08 255);
+  --muted:oklch(0.96 0.012 250);
+  --muted-foreground:oklch(0.46 0.03 252);
+  --accent:oklch(0.62 0.17 245);
+  --accent-foreground:oklch(0.99 0.005 250);
+  --border:oklch(0.91 0.015 250);
+  --gradient-hero:linear-gradient(180deg, oklch(0.28 0.10 255) 0%, oklch(0.18 0.07 258) 100%);
+  --gradient-accent:linear-gradient(135deg, oklch(0.28 0.10 255), oklch(0.55 0.16 245));
+  --shadow-elegant:0 20px 50px -20px oklch(0.20 0.08 258 / 0.35);
+  --shadow-soft:0 8px 30px -10px oklch(0.20 0.08 258 / 0.18);
+  --font-display:"Playfair Display", Georgia, serif;
+  --font-sans:"Inter", system-ui, -apple-system, sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--font-sans);
+  background:var(--background);
+  color:var(--foreground);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.01em;line-height:1.1;font-weight:600}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+em{font-style:normal;color:var(--accent)}
+
+.icon{width:1.25rem;height:1.25rem;stroke-width:2;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+
+.container{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+@media(min-width:1024px){.container{padding:0 2.5rem}}
+.container-wide{max-width:80rem;margin:0 auto;padding:0 1.5rem}
+@media(min-width:1024px){.container-wide{padding:0 2.5rem}}
+.container-narrow{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+@media(min-width:1024px){.container-narrow{padding:0 2.5rem}}
+
+.eyebrow{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.25em;color:var(--primary);font-weight:500}
+.section-title{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-top:1rem;color:var(--foreground)}
+.lead{color:var(--muted-foreground);font-size:1.05rem;max-width:42rem}
+.section{padding:6rem 0}
+.section--secondary{background:var(--secondary)}
+.section--navy{background:var(--gradient-hero);color:var(--primary-foreground)}
+.section-head{text-align:center;margin:0 auto 3.5rem;max-width:46rem}
+.section-head .lead{margin:1.25rem auto 0}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:9999px;font-size:.9rem;font-weight:500;padding:.85rem 1.75rem;cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease), background .25s var(--ease), opacity .25s var(--ease), box-shadow .25s var(--ease)}
+.btn .icon{width:1rem;height:1rem;transition:transform .25s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn:hover .icon{transform:translateX(3px)}
+.btn-accent{background:var(--accent);color:var(--accent-foreground);box-shadow:var(--shadow-elegant)}
+.btn-accent:hover{opacity:.92}
+.btn-primary{background:var(--primary);color:var(--primary-foreground)}
+.btn-primary:hover{background:var(--primary-deep)}
+.btn-outline{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+
+/* ---------- Header / Nav ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;transition:background .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);border-bottom:1px solid transparent}
+.site-header.scrolled{background:oklch(1 0 0 / .9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--foreground);border-bottom-color:var(--border);box-shadow:0 1px 20px -12px rgba(0,0,0,.3)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:5rem}
+.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-display);font-size:1.1rem;font-weight:600;letter-spacing:-.01em}
+.brand .icon{width:1.5rem;height:1.5rem}
+.nav-links{display:none;align-items:center;gap:1.75rem;font-size:.875rem}
+@media(min-width:1024px){.nav-links{display:flex}}
+.nav-links a{position:relative;padding:.5rem 0;transition:opacity .2s,color .2s}
+.nav-links a:hover{opacity:.7}
+.nav-links a.active{color:var(--accent);font-weight:600}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--accent);border-radius:9999px}
+.site-header:not(.scrolled) .nav-links a.active{color:#fff}
+.site-header:not(.scrolled) .nav-links a.active::after{background:#fff}
+.burger{display:inline-flex;background:none;border:none;color:inherit;cursor:pointer;padding:.25rem}
+@media(min-width:1024px){.burger{display:none}}
+.burger .icon{width:1.6rem;height:1.6rem}
+.burger .icon-x{display:none}
+body.menu-open .burger .icon-menu{display:none}
+body.menu-open .burger .icon-x{display:block}
+.nav-mobile{display:none;background:var(--background);color:var(--foreground);border-top:1px solid var(--border)}
+body.menu-open .nav-mobile{display:block}
+.nav-mobile .inner{display:flex;flex-direction:column;gap:.25rem;padding:1rem 1.5rem}
+.nav-mobile a{padding:.6rem 0 .6rem .75rem;font-size:.9rem;border-left:2px solid transparent;transition:.2s}
+.nav-mobile a:hover{border-left-color:var(--accent);background:oklch(0.62 0.17 245 / .05)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;color:var(--primary-foreground);background:var(--gradient-hero);overflow:hidden}
+.hero__bg{position:absolute;inset:0;will-change:transform;pointer-events:none}
+.hero__glow{position:absolute;top:-20%;right:-10%;width:70vw;height:70vw;max-width:900px;max-height:900px;background:radial-gradient(circle, oklch(0.55 0.16 245 / .35) 0%, transparent 65%)}
+.hero__art{position:absolute;right:-2%;bottom:0;width:min(620px,70%);opacity:.16;color:#cfe0ff}
+.hero__inner{position:relative;z-index:2;max-width:64rem;margin:0 auto;padding:8rem 1.5rem 6rem;text-align:center}
+.hero__eyebrow{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.3em;opacity:.8;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;margin-bottom:2rem}
+.hero p{max-width:38rem;margin:0 auto 2.5rem;opacity:.88;font-size:1.12rem}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.hero__scroll{position:relative;z-index:2;padding-bottom:3rem;display:flex;justify-content:center}
+.hero__scroll a{height:3rem;width:3rem;border-radius:9999px;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-25%)}}
+
+/* ---------- Intro ---------- */
+.intro{display:grid;gap:4rem;align-items:center;padding-top:6rem;padding-bottom:6rem}
+@media(min-width:768px){.intro{grid-template-columns:1fr 1fr}}
+.intro h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:1rem 0 1.5rem}
+.intro .body{display:flex;flex-direction:column;gap:1rem;color:var(--muted-foreground)}
+.intro-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;color:var(--primary);font-weight:500}
+.intro-link .icon{width:1rem;height:1rem;transition:transform .25s var(--ease)}
+.intro-link:hover .icon{transform:translateX(4px)}
+.intro__visual{position:relative}
+.intro__visual .accent{position:absolute;inset:-1rem;background:oklch(0.62 0.17 245 / .2);border-radius:1.25rem;transform:rotate(-2deg)}
+.intro__panel{position:relative;border-radius:1.25rem;box-shadow:var(--shadow-elegant);background:var(--gradient-hero);aspect-ratio:4/3;overflow:hidden;display:flex;align-items:flex-end}
+.intro__panel svg{position:absolute;right:0;bottom:0;width:80%;opacity:.5;color:#cfe0ff}
+.intro__panel .tag{position:relative;z-index:2;margin:1.5rem;color:#fff}
+.intro__panel .tag span{display:block;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;opacity:.75}
+.intro__panel .tag strong{font-family:var(--font-display);font-size:1.4rem;font-weight:600}
+
+/* ---------- Cards ---------- */
+.grid{display:grid;gap:1.5rem}
+.grid-2{grid-template-columns:1fr}
+@media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
+.grid-3{grid-template-columns:1fr}
+@media(min-width:640px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-4{grid-template-columns:1fr}
+@media(min-width:640px){.grid-4{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+
+.card{background:var(--card);border:1px solid oklch(0.91 0.015 250 / .6);border-radius:.85rem;padding:1.75rem;box-shadow:var(--shadow-soft);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-elegant)}
+.card__icon{height:3rem;width:3rem;border-radius:.6rem;display:flex;align-items:center;justify-content:center;color:var(--primary-foreground);margin-bottom:1.25rem;background:var(--gradient-accent)}
+.card h3{font-size:1.25rem;margin-bottom:.5rem;color:var(--foreground)}
+.card p{font-size:.9rem;color:var(--muted-foreground)}
+
+.card-flat{background:var(--card);border:1px solid oklch(0.91 0.015 250 / .6);border-radius:.85rem;padding:1.75rem;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.card-flat:hover{transform:translateY(-4px);box-shadow:var(--shadow-elegant)}
+.card-flat .icon{width:1.5rem;height:1.5rem;color:var(--primary);margin-bottom:1rem}
+.card-flat h3{font-size:1.25rem;margin-bottom:.5rem;color:var(--foreground)}
+.card-flat p{font-size:.9rem;color:var(--muted-foreground)}
+
+/* ---------- Pályázatok list ---------- */
+.feature{display:flex;gap:1.25rem;padding:1.75rem;background:var(--card);border:1px solid oklch(0.91 0.015 250 / .5);border-radius:.85rem;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.feature:hover{transform:translateY(-3px);box-shadow:var(--shadow-elegant)}
+.feature > .icon{width:1.5rem;height:1.5rem;color:var(--primary);flex-shrink:0;margin-top:.2rem}
+.feature h3{font-size:1.2rem;color:var(--foreground)}
+.feature p{font-size:.9rem;color:var(--muted-foreground);margin-top:.4rem}
+
+/* ---------- Miért mi (numbered) ---------- */
+.reasons{display:flex;flex-direction:column;gap:2.5rem;max-width:52rem;margin:0 auto}
+.reason{display:grid;gap:1.5rem;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:2.5rem}
+.reason:last-of-type{border-bottom:none}
+@media(min-width:768px){.reason{grid-template-columns:120px 1fr}}
+.reason .num{font-family:var(--font-display);font-size:3rem;color:#9cc0ff;line-height:1}
+.reason h3{font-size:1.5rem;margin-bottom:.6rem}
+.reason p{opacity:.85}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:48rem;margin:0 auto;display:flex;flex-direction:column;gap:.75rem}
+.faq__item{background:var(--card);border:1px solid oklch(0.91 0.015 250 / .6);border-radius:.75rem;overflow:hidden}
+.faq__q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-align:left;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;font-family:var(--font-display);font-size:1.05rem;color:var(--foreground);transition:background .2s}
+.faq__q:hover{background:oklch(0.62 0.17 245 / .05)}
+.faq__q .icon{color:var(--primary);flex-shrink:0;transition:transform .3s var(--ease)}
+.faq__item.open .faq__q .icon{transform:rotate(180deg)}
+.faq__a{color:var(--muted-foreground);font-size:.9rem}
+.faq__a .inner{padding:0 1.5rem 1.5rem}
+html.js .faq__a{max-height:0;opacity:0;overflow:hidden;transition:max-height .35s var(--ease),opacity .35s var(--ease)}
+html.js .faq__item.open .faq__a{opacity:1}
+
+/* ---------- Kapcsolat ---------- */
+.contact{display:grid;gap:3rem}
+@media(min-width:1024px){.contact{grid-template-columns:1fr 1fr}}
+.contact-list{display:flex;flex-direction:column;gap:1.5rem}
+.contact-item{display:flex;gap:1rem;align-items:flex-start}
+.contact-item .ic{height:2.75rem;width:2.75rem;border-radius:.6rem;background:var(--secondary);color:var(--primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item h3{font-size:1.05rem;color:var(--foreground)}
+.contact-item p{font-size:.9rem;color:var(--muted-foreground);margin-top:.2rem}
+.form{background:var(--card);border:1px solid oklch(0.91 0.015 250 / .5);border-radius:1.1rem;padding:2rem;display:flex;flex-direction:column;gap:1.25rem}
+.form label{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--muted-foreground);margin-bottom:.5rem}
+.form input,.form textarea{width:100%;padding:.8rem 1rem;border-radius:.6rem;border:1px solid var(--border);background:var(--background);font-family:inherit;font-size:.95rem;color:var(--foreground)}
+.form input:focus,.form textarea:focus{outline:2px solid oklch(0.62 0.17 245 / .4);outline-offset:0;border-color:var(--accent)}
+.form button{width:100%;justify-content:center}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--primary-deep);color:var(--primary-foreground);margin-top:6rem}
+.footer__grid{display:grid;gap:3rem;padding:4rem 0}
+@media(min-width:768px){.footer__grid{grid-template-columns:repeat(3,1fr)}}
+.footer h3{font-size:1.5rem;margin-bottom:.75rem}
+.footer p{font-size:.9rem;opacity:.8}
+.footer h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;opacity:.7;margin-bottom:1rem}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;font-size:.9rem}
+.footer ul a:hover{opacity:.7}
+.footer .contact-line{display:flex;align-items:center;gap:.75rem;font-size:.9rem}
+.footer .contact-line .icon{width:1rem;height:1rem}
+.footer__bar{border-top:1px solid rgba(255,255,255,.1)}
+.footer__bar .inner{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;padding:1.25rem 0;font-size:.75rem;opacity:.7}
+
+/* ---------- Motion (reveal) ---------- */
+html.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s);will-change:opacity,transform}
+html.js [data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html.js [data-reveal],html.js [data-reveal].in{opacity:1!important;transform:none!important;transition:none!important}
+  .hero__bg{transform:none!important}
+  .hero__scroll a{animation:none!important}
+  .btn:hover,.card:hover,.card-flat:hover,.feature:hover{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Icon sprite ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-calculator" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+</svg>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container-wide">
+    <div class="nav">
+      <a href="#top" class="brand"><svg class="icon"><use href="#i-compass"/></svg><span>Pesti Közös Képviselet</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#top" data-nav="top">Főoldal</a>
+        <a href="#rolunk" data-nav="rolunk">Rólunk</a>
+        <a href="#szolgaltatasok" data-nav="szolgaltatasok">Szolgáltatásaink</a>
+        <a href="#palyazatok" data-nav="palyazatok">Pályázatok</a>
+        <a href="#miert-mi" data-nav="miert-mi">Miért mi?</a>
+        <a href="#gyik" data-nav="gyik">GYIK</a>
+        <a href="#kapcsolat" data-nav="kapcsolat">Kapcsolat</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Menü" aria-expanded="false">
+        <svg class="icon icon-menu"><use href="#i-menu"/></svg>
+        <svg class="icon icon-x"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="inner">
+      <a href="#top">Főoldal</a>
+      <a href="#rolunk">Rólunk</a>
+      <a href="#szolgaltatasok">Szolgáltatásaink</a>
+      <a href="#palyazatok">Pályázatok</a>
+      <a href="#miert-mi">Miért mi?</a>
+      <a href="#gyik">GYIK</a>
+      <a href="#kapcsolat">Kapcsolat</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero__bg" id="heroBg">
+    <span class="hero__glow"></span>
+    <svg class="hero__art" viewBox="0 0 600 360" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <rect x="40" y="150" width="90" height="210"/><rect x="150" y="90" width="110" height="270"/><rect x="280" y="170" width="80" height="190"/><rect x="380" y="60" width="120" height="300"/><rect x="520" y="140" width="60" height="220"/>
+      <g stroke-width="1.2" opacity=".8">
+        <path d="M165 120h80M165 150h80M165 180h80M165 210h80M165 240h80M165 270h80M165 300h80"/>
+        <path d="M395 90h90M395 120h90M395 150h90M395 180h90M395 210h90M395 240h90M395 270h90M395 300h90"/>
+        <path d="M55 180h60M55 210h60M55 240h60M55 270h60M55 300h60"/>
+        <path d="M295 200h50M295 230h50M295 260h50M295 290h50"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero__inner" data-stagger>
+    <span class="hero__eyebrow" data-reveal>Társasházkezelés Pest oldalán</span>
+    <h1 data-reveal>Menedzsment <em>ami többet ad</em>,<br/>mint képviselet.</h1>
+    <p data-reveal>Komplex társasházkezelés mérnöki, jogi és pénzügyi háttérrel. Átlátható működés, gondos állagmegóvás, optimalizált költségek.</p>
+    <div class="hero__cta" data-reveal>
+      <a href="#szolgaltatasok" class="btn btn-accent">Szolgáltatásaink <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+      <a href="#kapcsolat" class="btn btn-outline">Kapcsolatfelvétel</a>
+    </div>
+  </div>
+  <div class="hero__scroll"><a href="#intro" aria-label="Tovább"><svg class="icon"><use href="#i-chevron-down"/></svg></a></div>
+</section>
+
+<!-- ===== Intro ===== -->
+<section id="intro">
+  <div class="container-wide intro">
+    <div data-reveal>
+      <span class="eyebrow">A mi szemléletünk</span>
+      <h2>A társasház is megérdemli a tudatos működtetést.</h2>
+      <div class="body">
+        <p>Sokan vannak, akik a közgyűlés szó hallatán legyintenek, mondván unalmas időpocsékolás. Mi gazdasági területek szakembereiként másként gondoljuk: egy ház akkor lehet hosszú életű és jól működő, ha a tulajdonosok együtt döntenek és optimalizálva működtetik azt.</p>
+        <p>Szeretünk gyors, hatékony megoldást találni — legyen szó állagmegóvásról, takarításról vagy pénzügyekről.</p>
+        <p>A klasszikus képviseleti teendők mellett szolgáltatásaink közé tartozik a ház pénzügyeinek optimalizálása, felesleges költségek feltárása, pályázatok felkutatása, mérnöki munkák, peres ügyek, biztosítások, valamint teljes körű társasház- és lakópark menedzsment.</p>
+      </div>
+      <a href="#szolgaltatasok" class="intro-link">Ismerje meg szolgáltatásainkat <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="intro__visual" data-reveal style="--d:.1s">
+      <span class="accent"></span>
+      <div class="intro__panel">
+        <svg viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="30" y="120" width="90" height="180"/><rect x="140" y="60" width="110" height="240"/><rect x="270" y="100" width="100" height="200"/>
+          <g stroke-width="1.2" opacity=".85">
+            <path d="M152 90h86M152 120h86M152 150h86M152 180h86M152 210h86M152 240h86M152 270h86"/>
+            <path d="M44 150h62M44 180h62M44 210h62M44 240h62M44 270h62"/>
+            <path d="M284 130h72M284 160h72M284 190h72M284 220h72M284 250h72M284 280h72"/>
+          </g>
+        </svg>
+        <div class="tag"><span>Pest oldalán</span><strong>Klasszikus és modern társasházak</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Principles ===== -->
+<section class="section section--secondary">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Így dolgozunk</span>
+      <h2 class="section-title">Négy alappillér, ami minden ház mögött áll</h2>
+    </div>
+    <div class="grid grid-4" data-stagger>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-graduation"/></svg></div><h3>Biztos alapok</h3><p>Felkészült, ingatlankezelői, társasházkezelői és mérlegképes könyvelői végzettséggel rendelkező szakemberek vagyunk.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-building"/></svg></div><h3>Szakmai háttér</h3><p>Van köztünk építész, gépészmérnök, közgazdász és jogász — minden kérdéskörre megvan a saját szakemberünk.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-gauge"/></svg></div><h3>Gyorsaság</h3><p>Gyorsan, hatékonyan reagálunk minden felmerülő problémára — mert a ház élete nem várhat.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-wallet"/></svg></div><h3>Költséghatékonyság</h3><p>Likviditás folyamatos figyelése, átlátható elszámolások, pályázatfigyelés és pályázatírás.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Rólunk ===== -->
+<section class="section" id="rolunk">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Rólunk</span>
+      <h2 class="section-title">Minden ház megérdemli a profi menedzsmentet</h2>
+      <p class="lead">Olyan csapat vagyunk, akik a társasházat is úgy kezelik, mint egy jól vezetett vállalkozást — átláthatóan, gazdaságosan és emberközelien.</p>
+    </div>
+    <div class="container-narrow" style="padding:0">
+      <div data-stagger style="display:flex;flex-direction:column;gap:1.25rem;color:var(--muted-foreground);margin-bottom:3.5rem">
+        <p data-reveal>A Pesti Közös Képviselet egy dinamikus csapat ingatlankezelői, mérnöki és mérlegképes könyvelői végzettséggel. Csapatunkban építész, gépészmérnök, közgazdász és jogász egyaránt dolgozik velünk, így a felmerülő kérdésekre házon belül találunk választ.</p>
+        <p data-reveal>Hisszük, hogy a társasház közössége akkor működik a legjobban, ha a tulajdonosok időben, pontos információk birtokában dönthetnek. Ezért teljes átláthatóságot biztosítunk: minden bevételről, kiadásról és folyamatban lévő ügyről bármikor naprakész képet kaphat.</p>
+        <p data-reveal>Ismerjük a pesti kerületeket, a hivatalokat, a helyi szolgáltatókat és a társasházak tipikus kihívásait. Ez teszi lehetővé, hogy gyorsan és hatékonyan reagáljunk minden helyzetre.</p>
+      </div>
+    </div>
+    <div class="grid grid-3" data-stagger>
+      <div class="card-flat" data-reveal><svg class="icon"><use href="#i-shield"/></svg><h3>Felelősség</h3><p>Felelősségbiztosítással, írásos szerződéssel, vállalt minőségi garanciákkal dolgozunk.</p></div>
+      <div class="card-flat" data-reveal><svg class="icon"><use href="#i-building"/></svg><h3>Helyi tudás</h3><p>Pest kerületeinek építészeti és jogi sajátosságait alaposan ismerjük.</p></div>
+      <div class="card-flat" data-reveal><svg class="icon"><use href="#i-sparkles"/></svg><h3>Gyorsaság</h3><p>Folyamatos képzéssel és modern eszközökkel támogatjuk az ügyintézést.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Szolgáltatások ===== -->
+<section class="section section--secondary" id="szolgaltatasok">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Szolgáltatások</span>
+      <h2 class="section-title">Komplex társasházkezelés egy kézből</h2>
+      <p class="lead">A klasszikus képviseleti teendőktől a műszaki üzemeltetésig, jogi képviseletig és pályázatírásig — minden, ami egy modern társasházhoz kell.</p>
+    </div>
+    <div class="grid grid-4" data-stagger>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-wallet"/></svg></div><h3>Pénzügyi menedzsment</h3><p>Költségoptimalizálás, likviditástervezés, átlátható havi beszámolók.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-calculator"/></svg></div><h3>Könyvelés</h3><p>Mérlegképes könyvelők által végzett pontos és határidőre kész könyvelés.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-scale"/></svg></div><h3>Jogi háttér</h3><p>Saját jogász. Közgyűlési határozatok, peres ügyek, behajtás támogatása.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-wrench"/></svg></div><h3>Mérnöki munkák</h3><p>Építész és gépészmérnök kollégáink felügyelnek minden műszaki kérdést.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-file"/></svg></div><h3>Pályázatfigyelés</h3><p>Aktuális pályázatok felkutatása, dokumentáció és teljes ügyintézés.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-sparkles"/></svg></div><h3>Karbantartás</h3><p>Megbízható partnerhálózattal villany, víz, lift, tetőszigetelés és takarítás.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-users"/></svg></div><h3>Közgyűlés szervezés</h3><p>Előkészítés, levezetés, jegyzőkönyvezés — pontosan és törvényesen.</p></div>
+      <div class="card" data-reveal><div class="card__icon"><svg class="icon"><use href="#i-shield"/></svg></div><h3>Biztosítások</h3><p>Optimalizált társasházi biztosítási csomagok, kárrendezés támogatása.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pályázatok ===== -->
+<section class="section" id="palyazatok">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Pályázatok</span>
+      <h2 class="section-title">Pénz a házban — pályázatokkal</h2>
+      <p class="lead">Folyamatosan figyeljük a társasházi pályázati lehetőségeket. A felkutatástól az elszámolásig minden lépésben mellettünk áll a ház.</p>
+    </div>
+    <div class="container-narrow" style="padding:0;display:flex;flex-direction:column;gap:1.25rem" data-stagger>
+      <div class="feature" data-reveal><svg class="icon"><use href="#i-check-circle"/></svg><div><h3>Energetikai korszerűsítés</h3><p>Hőszigetelés, nyílászárócsere — vissza nem térítendő támogatások és kedvezményes hitelek.</p></div></div>
+      <div class="feature" data-reveal><svg class="icon"><use href="#i-check-circle"/></svg><div><h3>Homlokzat-felújítás</h3><p>Műemléki és klasszikus bérházak homlokzati programjai.</p></div></div>
+      <div class="feature" data-reveal><svg class="icon"><use href="#i-check-circle"/></svg><div><h3>Lift modernizáció</h3><p>Lift cseréje vagy felújítása biztonsági előírásokkal és pályázati háttérrel.</p></div></div>
+      <div class="feature" data-reveal><svg class="icon"><use href="#i-check-circle"/></svg><div><h3>Napelemes rendszerek</h3><p>Közös tulajdonú részekre telepíthető napelemek, energiamenedzsment.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Miért mi ===== -->
+<section class="section section--navy" id="miert-mi">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" style="color:#9cc0ff">Miért mi?</span>
+      <h2 class="section-title" style="color:#fff">Mert a házát nem akárkire bízza</h2>
+      <p class="lead" style="color:rgba(255,255,255,.85)">Négy érv, amiért a Pest oldali tulajdonosi közösségek minket választanak.</p>
+    </div>
+    <div class="reasons" data-stagger>
+      <div class="reason" data-reveal><span class="num">01</span><div><h3>Átláthatóság</h3><p>Minden bevétel és kiadás dokumentált, online lekérdezhető. Senki nem marad le információkról.</p></div></div>
+      <div class="reason" data-reveal><span class="num">02</span><div><h3>Gyorsaság</h3><p>24 órán belüli reagálás minden bejelentésre. Készenléti hibaelhárítás, ügyeleti rendszer.</p></div></div>
+      <div class="reason" data-reveal><span class="num">03</span><div><h3>Szakértelem</h3><p>Mérnök, jogász, közgazdász, könyvelő házon belül. Nem küldözgetjük a tulajdonosokat.</p></div></div>
+      <div class="reason" data-reveal><span class="num">04</span><div><h3>Költséghatékonyság</h3><p>Beszerzéseinket folyamatosan optimalizáljuk. Évente átlagosan 12-18% megtakarítást mutatunk ki.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:3.5rem" data-reveal>
+      <a href="#kapcsolat" class="btn btn-accent">Kérjen ajánlatot <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GYIK ===== -->
+<section class="section" id="gyik">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">GYIK</span>
+      <h2 class="section-title">Gyakori kérdések</h2>
+      <p class="lead">A leggyakrabban felmerülő kérdések a társasházkezelésről és arról, hogyan dolgozunk együtt a tulajdonosi közösségekkel.</p>
+    </div>
+    <div class="faq" data-stagger>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Mit csinál pontosan a közös képviselő?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">A közös képviselő a társasház törvényes képviselője: intézi a pénzügyeket, a könyvelést, a szolgáltatókkal való kapcsolattartást, a karbantartást, a közgyűlések előkészítését és levezetését, valamint képviseli a házat hatóságok és harmadik felek előtt.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Hogyan tudunk átszerződni hozzátok?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Egy ingyenes konzultációval kezdjük, ahol átnézzük a ház helyzetét. A váltáshoz közgyűlési határozat szükséges — ennek előkészítésében és levezetésében segítünk. Az átadás-átvétel jegyzőkönyvvel, teljes dokumentációval történik.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Mennyibe kerül a szolgáltatásotok?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">A díj a ház méretétől, az albetétek számától és a vállalt feladatok körétől függ. Helyszíni felmérés után személyre szabott ajánlatot készítünk — nincsenek rejtett költségek.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Milyen gyorsan reagáltok egy bejelentésre?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Munkaidőben általában néhány órán belül visszajelzünk, sürgős esetekben (csőtörés, áramszünet, lift-hiba) 24/7 ügyeleti elérhetőséget biztosítunk a lakóknak.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Hogyan látunk rá a ház pénzügyeire?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Online felületen keresztül a tulajdonosok bármikor megnézhetik az aktuális egyenleget, a befizetéseket, a számlákat és a havi kimutatást. Évente részletes elszámolást és költségvetést is készítünk.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Foglalkoztok pályázatírással is?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Igen — energetikai, homlokzati, lift- és napelemes pályázatoknál teljes körű ügyintézést vállalunk: a felkutatástól a dokumentáció elkészítésén át az elszámolásig.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Mi történik, ha valaki nem fizeti a közös költséget?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Fokozatos behajtási folyamatot működtetünk: emlékeztető, fizetési felszólítás, fizetési meghagyás, végül szükség esetén bírósági végrehajtás — mindig jogszerűen és dokumentáltan, a ház érdekét képviselve.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Ki dönt a felújításokról és nagyobb költésekről?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Minden lényeges kérdésben a tulajdonosi közösség dönt a közgyűlésen. A közös képviselő előkészíti a döntéshez szükséges ajánlatokat, műszaki anyagokat és pénzügyi tervet.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Milyen méretű házakat vállaltok?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">30 albetéttől akár több száz lakásos társasházakig dolgozunk. Mindegy, hogy klasszikus pesti bérházról vagy modern új építésű projektről van szó.</div></div></div>
+      <div class="faq__item" data-reveal><button class="faq__q" aria-expanded="false">Hol érhetünk el titeket?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="faq__a"><div class="inner">Telefonon, e-mailben és személyesen az irodánkban. A Kapcsolat oldalon megtalálható minden elérhetőség, valamint egy űrlap, amin keresztül 1 munkanapon belül visszahívunk.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Kapcsolat ===== -->
+<section class="section section--secondary" id="kapcsolat">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Kapcsolat</span>
+      <h2 class="section-title">Beszéljünk a házáról</h2>
+      <p class="lead">Írjon nekünk vagy hívjon — első konzultáció díjmentes, és helyszíni felmérést is vállalunk.</p>
+    </div>
+    <div class="contact">
+      <div class="contact-list" data-stagger>
+        <div class="contact-item" data-reveal><div class="ic"><svg class="icon"><use href="#i-phone"/></svg></div><div><h3>Telefon</h3><p>+36 1 234 5678</p></div></div>
+        <div class="contact-item" data-reveal><div class="ic"><svg class="icon"><use href="#i-mail"/></svg></div><div><h3>E-mail</h3><p>szabolcs.torok@advery.hu</p></div></div>
+        <div class="contact-item" data-reveal><div class="ic"><svg class="icon"><use href="#i-pin"/></svg></div><div><h3>Iroda</h3><p>1052 Budapest, Pest oldal</p></div></div>
+        <div class="contact-item" data-reveal><div class="ic"><svg class="icon"><use href="#i-clock"/></svg></div><div><h3>Nyitvatartás</h3><p>H–P: 9:00 – 17:00<br/>Hibabejelentés 24/7</p></div></div>
+      </div>
+      <form class="form" id="contactForm" data-reveal style="--d:.1s">
+        <div><label>Név</label><input required name="nev" /></div>
+        <div><label>E-mail</label><input type="email" required name="email" /></div>
+        <div><label>Társasház címe</label><input name="cim" /></div>
+        <div><label>Üzenet</label><textarea rows="5" required name="uzenet"></textarea></div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Üzenet küldése</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer__grid">
+      <div>
+        <h3>Pesti Közös Képviselet</h3>
+        <p>Menedzsment ami többet ad, mint képviselet. Komplex társasházkezelés Pest oldalán — gazdasági szemlélettel, mérnöki precizitással.</p>
+      </div>
+      <div>
+        <h4>Menü</h4>
+        <ul>
+          <li><a href="#rolunk">Rólunk</a></li>
+          <li><a href="#szolgaltatasok">Szolgáltatásaink</a></li>
+          <li><a href="#palyazatok">Pályázatok</a></li>
+          <li><a href="#miert-mi">Miért mi?</a></li>
+          <li><a href="#gyik">GYIK</a></li>
+          <li><a href="#kapcsolat">Kapcsolat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elérhetőség</h4>
+        <ul>
+          <li class="contact-line"><svg class="icon"><use href="#i-phone"/></svg><span>+36 1 234 5678</span></li>
+          <li class="contact-line"><svg class="icon"><use href="#i-mail"/></svg><span>szabolcs.torok@advery.hu</span></li>
+          <li class="contact-line"><svg class="icon"><use href="#i-pin"/></svg><span>1052 Budapest, Pest oldal</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="inner">
+        <span>© <span id="year">2026</span> Pesti Közös Képviselet. Minden jog fenntartva.</span>
+        <span>Adatvédelem · Impresszum</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ----- Footer year ----- */
+  var y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* ----- Mobile menu ----- */
+  var burger = document.getElementById("burger");
+  var navMobile = document.getElementById("navMobile");
+  if (burger) {
+    burger.addEventListener("click", function(){
+      var open = document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+    navMobile.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", function(){
+        document.body.classList.remove("menu-open");
+        burger.setAttribute("aria-expanded","false");
+      });
+    });
+  }
+
+  /* ----- Header solid-on-scroll ----- */
+  var header = document.getElementById("siteHeader");
+  var hero = document.getElementById("top");
+  function onScrollHeader(){
+    var threshold = hero ? hero.offsetHeight - 90 : 80;
+    header.classList.toggle("scrolled", window.scrollY > threshold);
+  }
+  onScrollHeader();
+  window.addEventListener("scroll", onScrollHeader, {passive:true});
+
+  /* ----- Scroll reveal + stagger ----- */
+  document.querySelectorAll("[data-stagger]").forEach(function(group){
+    var kids = group.querySelectorAll(":scope > [data-reveal]");
+    kids.forEach(function(el, i){
+      if (!el.style.getPropertyValue("--d")) el.style.setProperty("--d", (i * 0.09) + "s");
+    });
+  });
+  var reveals = document.querySelectorAll("[data-reveal]");
+  if (reduced || !("IntersectionObserver" in window)) {
+    reveals.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, {threshold:0.15, rootMargin:"0px 0px -8% 0px"});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ----- Hero parallax ----- */
+  var heroBg = document.getElementById("heroBg");
+  if (heroBg && !reduced) {
+    var ticking = false;
+    window.addEventListener("scroll", function(){
+      if (!ticking){
+        window.requestAnimationFrame(function(){
+          var sc = window.scrollY;
+          var s = 1.06 + Math.min(sc, 600) / 600 * 0.06;
+          heroBg.style.transform = "translateY(" + (sc * 0.22) + "px) scale(" + s + ")";
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, {passive:true});
+  }
+
+  /* ----- FAQ accordion (single open) ----- */
+  var faqItems = Array.prototype.slice.call(document.querySelectorAll(".faq__item"));
+  function closeItem(item){
+    item.classList.remove("open");
+    item.querySelector(".faq__q").setAttribute("aria-expanded","false");
+    item.querySelector(".faq__a").style.maxHeight = "0px";
+  }
+  function openItem(item){
+    item.classList.add("open");
+    item.querySelector(".faq__q").setAttribute("aria-expanded","true");
+    var a = item.querySelector(".faq__a");
+    a.style.maxHeight = a.scrollHeight + "px";
+  }
+  faqItems.forEach(function(item){
+    item.querySelector(".faq__q").addEventListener("click", function(){
+      var isOpen = item.classList.contains("open");
+      faqItems.forEach(function(o){ if (o !== item && o.classList.contains("open")) closeItem(o); });
+      if (isOpen) closeItem(item); else openItem(item);
+    });
+  });
+  /* open the first by default */
+  if (faqItems[0]) openItem(faqItems[0]);
+  /* keep open heights correct on resize */
+  window.addEventListener("resize", function(){
+    var open = document.querySelector(".faq__item.open .faq__a");
+    if (open) open.style.maxHeight = open.scrollHeight + "px";
+  });
+
+  /* ----- Active nav highlight ----- */
+  var navAnchors = {};
+  document.querySelectorAll(".nav-links a[data-nav]").forEach(function(a){ navAnchors[a.getAttribute("data-nav")] = a; });
+  var sections = ["top","rolunk","szolgaltatasok","palyazatok","miert-mi","gyik","kapcsolat"]
+    .map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if ("IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          Object.keys(navAnchors).forEach(function(k){ navAnchors[k].classList.remove("active"); });
+          var link = navAnchors[e.target.id];
+          if (link) link.classList.add("active");
+        }
+      });
+    }, {rootMargin:"-45% 0px -50% 0px"});
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+  /* ----- Contact form (demo, no backend) ----- */
+  var form = document.getElementById("contactForm");
+  var submitBtn = document.getElementById("submitBtn");
+  var CONTACT_EMAIL = "szabolcs.torok@advery.hu";
+  if (form) {
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var data = new FormData(form);
+      var nev = (data.get("nev") || "").toString().trim();
+      var email = (data.get("email") || "").toString().trim();
+      var cim = (data.get("cim") || "").toString().trim();
+      var uzenet = (data.get("uzenet") || "").toString().trim();
+      var subject = "Kapcsolatfelvétel – Pesti Közös Képviselet" + (nev ? " – " + nev : "");
+      var body = [
+        "Név: " + nev,
+        "E-mail: " + email,
+        "Társasház címe: " + cim,
+        "",
+        "Üzenet:",
+        uzenet
+      ].join("\n");
+      var href = "mailto:" + CONTACT_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+      window.location.href = href;
+      submitBtn.textContent = "Megnyitottuk a levelezőjét — küldje el az üzenetet!";
+    });
+  }
+})();
+</script>
+</body>
+</html>
