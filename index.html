@@ -140,7 +140,8 @@ body.menu-open .nav-mobile{display:block}
 .intro__visual{position:relative}
 .intro__visual .accent{position:absolute;inset:-1rem;background:oklch(0.62 0.17 245 / .2);border-radius:1.25rem;transform:rotate(-2deg)}
 .intro__panel{position:relative;border-radius:1.25rem;box-shadow:var(--shadow-elegant);background:var(--gradient-hero);aspect-ratio:4/3;overflow:hidden;display:flex;align-items:flex-end}
-.intro__panel svg{position:absolute;right:0;bottom:0;width:80%;opacity:.5;color:#cfe0ff}
+.intro__panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.intro__panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, oklch(0.18 0.07 258 / 0) 45%, oklch(0.18 0.07 258 / .8) 100%)}
 .intro__panel .tag{position:relative;z-index:2;margin:1.5rem;color:#fff}
 .intro__panel .tag span{display:block;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;opacity:.75}
 .intro__panel .tag strong{font-family:var(--font-display);font-size:1.4rem;font-weight:600}
@@ -336,14 +337,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
     <div class="intro__visual" data-reveal style="--d:.1s">
       <span class="accent"></span>
       <div class="intro__panel">
-        <svg viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <rect x="30" y="120" width="90" height="180"/><rect x="140" y="60" width="110" height="240"/><rect x="270" y="100" width="100" height="200"/>
-          <g stroke-width="1.2" opacity=".85">
-            <path d="M152 90h86M152 120h86M152 150h86M152 180h86M152 210h86M152 240h86M152 270h86"/>
-            <path d="M44 150h62M44 180h62M44 210h62M44 240h62M44 270h62"/>
-            <path d="M284 130h72M284 160h72M284 190h72M284 220h72M284 250h72M284 280h72"/>
-          </g>
-        </svg>
+        <img src="assets/mi-szemleletunk.jpg" alt="Felújítás alatt álló pesti bérház udvara" loading="lazy" width="533" height="800" />
         <div class="tag"><span>Pest oldalán</span><strong>Klasszikus és modern társasházak</strong></div>
       </div>
     </div>
